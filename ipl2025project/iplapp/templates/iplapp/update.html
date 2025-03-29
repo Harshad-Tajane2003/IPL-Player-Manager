@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Update Page </title>
+</head>
+<body>
+    <br> <h1 style="text-align: center;"> UPDATE {{p.pname}} INFO HERE </h1>
+    <br> <hr><hr> <br>
+    <div class="container" style="text-align: center;">
+        <form action="/iplapp/update/{{p.jno}}/" method="post">
+            {% csrf_token %}
+
+            <label for="jno"> <b> Enter Jersy Number : </b></label>
+            <input type="number" name="jno" value="{{p.jno}}" disabled><br><br>
+
+            <label for="pname"> <b> Enter Player Name : </b></label>
+            <input type="text" name="pname" value="{{p.pname}}"><br><br>
+
+            <label for="runs"> <b> Enter Player Runs : </b></label>
+            <input type="number" name="runs" value="{{p.runs}}"><br><br>
+
+            <label for="wickets"> <b> Enter wickets : </b></label>
+            <input type="number" name="wickets" value="{{p.wickets}}"><br><br>
+
+            <label for="tname"> <b> Enter Team Name : </b></label>
+            <input type="text" name="tname" value="{{p.tname}}"><br><br>
+
+            <button type="submit" class="btn btn-success"> <b> UPDATE </b> </button>
+        </form>
+
+
+    </div>
+
+</body>
+</html>
